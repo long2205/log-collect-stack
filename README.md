@@ -1,14 +1,8 @@
-# Welcome to your CDK TypeScript project!
-
-This is a blank project for TypeScript development with CDK.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+# CUSTOM ERROR NOTIFICATION FOR LOG GROUP
+1. Deploy with custom email for SNS to send notifications, log group and log stream prefix
+```
+cdk deploy --parameters subcriptionEmail=sabo2205@gmail.com --parameters logName=testlog
+```
+2. Confirm subscription after deploy
+3. You can test run by creating new log event in log group
+Current setting gonna push notification with **ERROR** or **WARN**
